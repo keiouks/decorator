@@ -26,3 +26,10 @@ export function logSome(
   }
   return propertyDescriptor;
 }
+
+// 访问器装饰器
+export function logAccess(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  console.log(target);
+  console.log(propertyKey);
+  console.log(descriptor);
+}
